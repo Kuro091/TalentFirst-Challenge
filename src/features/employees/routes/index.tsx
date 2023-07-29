@@ -5,6 +5,7 @@ export const EmployeesRoutes = () => {
   return (
     <Routes>
       <Route path='' element={<Employees />} />
+      <Route path='*' element={<Navigate to='.' />} />
     </Routes>
   );
 };

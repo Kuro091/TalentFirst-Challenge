@@ -4,7 +4,7 @@ import { AppRoutes } from '@/routes';
 function App() {
   return (
     <AppProvider>
-      <AppRoutes />;
+      <AppRoutes />
     </AppProvider>
   );
 }

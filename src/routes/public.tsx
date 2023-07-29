@@ -4,7 +4,7 @@ const { EmployeesRoutes } = lazyImport(() => import('@/features/employees'), 'Em
 
 export const publicRoutes = [
   {
-    path: '/',
+    path: '*',
     element: <EmployeesRoutes />,
   },
 ];
