@@ -1,0 +1,13 @@
+.wrapper {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+
+    &__content {
+        // min-height: 80vh;
+        padding-inline: 2rem;
+    }
+
+}
+
+

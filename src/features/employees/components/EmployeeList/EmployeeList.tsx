@@ -1,5 +1,6 @@
 import { Employee } from '../../types';
-import styles from './EmployeeList.module.css';
+import { EmployeeCard } from '../EmployeeCard';
+import styles from './EmployeeList.module.scss';
 
 interface EmployeeListProps {
   employees: Employee[] | undefined;
@@ -8,7 +9,8 @@ interface EmployeeListProps {
 const EmployeeList = ({ employees }: EmployeeListProps) => {
   return (
     <section className={styles.employee_list}>
-      {employees && JSON.stringify(employees, null, 2)}
+      {employees &&
+        employees.map((employee) => <EmployeeCard key={employee.id} employee={employee} />)}
     </section>
   );
 };

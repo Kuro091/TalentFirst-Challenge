@@ -1,10 +1,15 @@
+import NotFound from '@/features/misc/routes/NotFound';
 import { lazyImport } from '@/utils/lazyImport';
 
 const { EmployeesRoutes } = lazyImport(() => import('@/features/employees'), 'EmployeesRoutes');
 
 export const publicRoutes = [
   {
-    path: '*',
+    path: '/',
     element: <EmployeesRoutes />,
+  },
+  {
+    path: '*',
+    element: <NotFound />,
   },
 ];

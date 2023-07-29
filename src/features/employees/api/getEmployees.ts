@@ -16,7 +16,6 @@ type UseEmployeesOptions = {
 };
 
 export const useEmployees = ({ config }: UseEmployeesOptions = {}) => {
-  console.log(import.meta.env.REACT_APP_API_URL)
   return useQuery<ExtractFnReturnType<QueryFnType>>({
     ...config,
     queryKey: ['employees'],

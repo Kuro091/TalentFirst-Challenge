@@ -1,0 +1,21 @@
+.employment_title_wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    padding-top: 1rem;
+    padding-left: 2.5rem;
+    height:100%;
+
+    &__section {
+        max-height: 3rem;
+        display: flex;
+        place-items: center;
+        gap: 0.5rem;
+        height:100%;
+    }
+
+    &__icon {
+        display: flex;
+        place-items: center;
+    }
+}
