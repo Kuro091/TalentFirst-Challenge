@@ -36,7 +36,7 @@ const EmployeeCard = ({ employee }: EmployeeCardProps) => {
         <>
           <div className={styles.employment_title_wrapper}>
             {additionalInfo.map((data) => (
-              <div className={styles.employment_title_wrapper__section}>
+              <div key={data.info} className={styles.employment_title_wrapper__section}>
                 <div className={styles.employment_title_wrapper__icon}>{data.icon}</div>
                 <p>{data.info}</p>
               </div>

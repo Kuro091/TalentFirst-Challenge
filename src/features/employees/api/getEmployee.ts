@@ -1,6 +1,6 @@
 import { useQuery } from 'react-query';
 
-import { axios } from '@/lib/axios';
+import axios from '@/lib/AxiosInterceptor';
 import { ExtractFnReturnType, QueryConfig } from '@/lib/react-query';
 
 import { Employee } from '../types';

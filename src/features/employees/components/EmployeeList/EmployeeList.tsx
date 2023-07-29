@@ -12,8 +12,8 @@ const EmployeeList = ({ employees }: EmployeeListProps) => {
     <section className={styles.employee_list}>
       {employees &&
         employees.map((employee) => (
-          <Link to={`/user/${employee.id}`}>
-            <EmployeeCard key={employee.id} employee={employee} />
+          <Link key={employee.id} to={`/user/${employee.id}`}>
+            <EmployeeCard employee={employee} />
           </Link>
         ))}
     </section>

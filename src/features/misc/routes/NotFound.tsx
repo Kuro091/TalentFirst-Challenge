@@ -12,10 +12,10 @@ const NotFound = () => {
         <h2>Error 404</h2>
         <Button
           onClick={() => {
-            navigate('.');
+            navigate('/');
           }}
         >
-          Go Back
+          Go back
         </Button>
       </div>
     </MainLayout>

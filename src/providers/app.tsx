@@ -2,6 +2,7 @@ import { queryClient } from '@/lib/react-query';
 import React from 'react';
 import { BrowserRouter as Router } from 'react-router-dom';
 import { QueryClientProvider } from 'react-query';
+import { AxiosInterceptor } from '@/lib/AxiosInterceptor';
 
 type AppProviderProps = {
   children: React.ReactNode;
@@ -9,13 +10,11 @@ type AppProviderProps = {
 
 export const AppProvider = ({ children }: AppProviderProps) => {
   return (
-    <React.Suspense
-      fallback={
-        <div className='flex items-center justify-center w-screen h-screen'>Spinner here...</div>
-      }
-    >
+    <React.Suspense fallback={<h5>Spinner here...</h5>}>
       <QueryClientProvider client={queryClient}>
-        <Router>{children}</Router>
+        <Router>
+          <AxiosInterceptor>{children}</AxiosInterceptor>
+        </Router>
       </QueryClientProvider>
     </React.Suspense>
   );
