@@ -9,6 +9,10 @@ export const publicRoutes = [
     element: <EmployeesRoutes />,
   },
   {
+    path: '/user/*',
+    element: <EmployeesRoutes />,
+  },
+  {
     path: '*',
     element: <NotFound />,
   },
