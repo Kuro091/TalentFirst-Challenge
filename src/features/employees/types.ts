@@ -40,3 +40,8 @@ export interface Subscription {
   payment_method: string;
   term:           string;
 }
+
+
+export type Inputs = {
+  searchQuery: string;
+};

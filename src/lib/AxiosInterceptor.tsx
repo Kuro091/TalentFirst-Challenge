@@ -18,7 +18,7 @@ const AxiosInterceptor = ({ children }: any) => {
     };
 
     const resInterceptor = (response: any) => {
-      return response.data;
+      return response;
     };
 
     const errInterceptor = (error: any) => {

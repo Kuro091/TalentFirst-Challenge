@@ -1,0 +1,23 @@
+.employee_search_container {
+    display: flex;
+    height: 100%;
+    gap: 2rem;
+    align-items: center;
+    justify-content: center;
+}
+
+.search_input {
+    margin-right: 2rem;
+}
+
+.clear_btn{
+    display: flex;
+    place-items: center;
+    max-height: 3rem;
+}
+
+.submit_btn{
+    display: flex;
+    place-items: center;
+    max-height: 3rem;
+}

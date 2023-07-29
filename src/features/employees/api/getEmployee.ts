@@ -5,8 +5,9 @@ import { ExtractFnReturnType, QueryConfig } from '@/lib/react-query';
 
 import { Employee } from '../types';
 
-export const getEmployee = ({ employeeId }: { employeeId: string }): Promise<Employee> => {
-  return axios.get(`/users/${employeeId}`);
+export const getEmployee = async ({ employeeId }: { employeeId: string }): Promise<Employee> => {
+  const res = await axios.get(`/users/${employeeId}`);
+  return res.data;
 };
 
 type QueryFnType = typeof getEmployee;

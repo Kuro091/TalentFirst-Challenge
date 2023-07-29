@@ -7,13 +7,28 @@ type InputFieldProps = FieldWrapperPassThroughProps & {
   type?: 'text' | 'email' | 'password';
   className?: string;
   registration: Partial<UseFormRegisterReturn>;
+  placeholder?: string;
+  inputClassName?: string;
 };
 
 export const InputField = (props: InputFieldProps) => {
-  const { type = 'text', label, className, registration, error } = props;
+  const {
+    type = 'text',
+    label,
+    className,
+    registration,
+    error,
+    placeholder,
+    inputClassName,
+  } = props;
   return (
-    <FieldWrapper label={label} error={error}>
-      <input type={type} className={`${styles.input_field} ${className}`} {...registration} />
+    <FieldWrapper label={label} error={error} className={className}>
+      <input
+        placeholder={placeholder}
+        type={type}
+        className={`${styles.input_field} ${inputClassName}`}
+        {...registration}
+      />
     </FieldWrapper>
   );
 };
